@@ -12,6 +12,7 @@ nav {
   justify-content: space-between;
   background-color: rgb(15, 152, 120);
   color: aliceblue;
+  border: 1px solid red;
 }
 
 .nav-list {
@@ -74,9 +75,17 @@ input[type="checkbox"]{
 @media ( max-width: 500px ) {
   .nav-list {
     display: none;
-    /* position: absolute; */
-
+    position: absolute;
+    text-align: center;
+    top: 55px;
+    right: 0;
+    left: 0;
+    background-color: rgb(15, 152, 120);
   }
+
+  /* .nav-list li + li {
+    margin-top: 10px;
+  } */
 
   .hamburger {
     display: block;
@@ -84,6 +93,14 @@ input[type="checkbox"]{
 
   input[type="checkbox"]:checked ~ .nav-list {
     display: block;
+  }
+
+  .dropdown {
+    z-index: 1;
+    background-color: green;
+    width: 120px;
+    position: absolute;
+    left: 60%;
   }
 }
 

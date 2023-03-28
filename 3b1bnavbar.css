@@ -1,0 +1,83 @@
+/* Basic CSS utilities */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px 15px;
+  color: white;
+  transition: 0.4s ease;
+  position: relative;
+}
+
+/* Actual CSS */
+
+header {
+  padding: 30px;
+  background-color: black;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu.two a {
+  font-family: 'Lora', sans-serif;
+  font-size: 1.8rem;
+}
+
+ul {
+  display: flex;
+}
+
+nav:hover a:not(#logo-title, a:hover) {
+  color: grey
+}
+
+nav a:hover {
+  color: #03a9f4;
+  transition: 0.4s ease;
+}
+
+/* Creating the tooltips */
+
+.tooltiptext {
+  color: white;
+  border: 1px solid yellow;
+  position: absolute;
+  width: 15rem;
+  text-align: center;
+
+  /* Positioning the tooltip */
+  top: 3rem;
+  left: -3rem;
+}
+
+.tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: yellow transparent transparent transparent;
+}
