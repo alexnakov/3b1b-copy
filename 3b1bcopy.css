@@ -38,9 +38,13 @@ header {
 }
 
 .logo-title .brand-title {
-  font-size: 30px;
+  font-size: 2.5rem;
   font-family: 'Lora', sans-serif;
 }
+
+.logo-title:hover .brand-title {
+  color: #03a9f4;
+} .logo-title:hover { cursor: pointer; }
 
 nav {
   width: 100%;
@@ -61,11 +65,6 @@ nav > ul {
   z-index: 1;
 }
 
-/* for testing purpose only */
-a, li {
-  border: 1px solid red !important;
-}
-
 .navbar-link > a {
   position: relative;
 }
@@ -77,22 +76,86 @@ a, li {
   pointer-events: none;
   padding: 10px;
   z-index: 1;
+  
   top: 40px;
-
-  color: skyblue;
-  border: 1px solid blue;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .tooltip.up.first {
-  left: 20px;
+  left: 140px;
 }
 
-.tooltip.up:not(.tooltip.up) {
-  top: 50px;
-  left: 50%;
-  transform: translate(-50%);
+.tooltip.up.last {
+  left: -38px;
 }
 
-.navbar-link:hover .tooltip.up {
+.tooltip-arrow::after {
+  visibility: hidden;
+  content:'';
+  position:absolute;
+  width:20px;
+  height:20px;
+  left:50%;
+  transform:translate(-50%,-50%) rotate(45deg);
+  background-color:darkgray;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+  top: 40px;
+}
+
+/* Tooltips/arrow become visible after hover on nav,ul,<li>  */
+.navbar-link:hover .tooltip.up, .navbar-link:hover .tooltip-arrow::after {
   visibility: visible;
+  color: white;
+  background-color: darkgray;
 }
+
+
+/* hovering navbar animations */
+
+nav:hover:not(.logo-title) a {
+  /* color: #03a9f4; */
+  color: #737373;
+  transition: 0.2s ease;
+}
+
+.navbar-link:hover > a {
+  color: #03a9f4 !important;
+}
+
+/*                */
+/*  NEXT SECTION  */
+/*                */
+
+section {
+  background-color: rgb(24, 24, 24);
+}
+
+.section-wrapper {
+  padding: 30px;
+}
+
+h1 { 
+  text-align: center; 
+  font-family: Lora;
+  font-size: 2rem;;
+}
+
+.icons-wrappers-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper > img {
+  
+}
+
+
+
+
+
+
+
+
+
