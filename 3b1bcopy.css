@@ -1,0 +1,98 @@
+/* Basic CSS utilities */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Actual CSS */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+  background-color: black;
+  position: relative;
+}
+
+.logo-title {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 3;
+}
+
+.logo-title .brand-title {
+  font-size: 30px;
+  font-family: 'Lora', sans-serif;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+nav > ul {
+  display: flex;
+  position: relative;
+}
+
+.navbar-link {
+  padding: 10px 15px;
+  position: relative;
+
+  z-index: 1;
+}
+
+/* for testing purpose only */
+a, li {
+  border: 1px solid red !important;
+}
+
+.navbar-link > a {
+  position: relative;
+}
+
+.tooltip.up {
+  visibility: hidden;
+  position: absolute;
+  white-space: nowrap;
+  pointer-events: none;
+  padding: 10px;
+  z-index: 1;
+  top: 40px;
+
+  color: skyblue;
+  border: 1px solid blue;
+}
+
+.tooltip.up.first {
+  left: 20px;
+}
+
+.tooltip.up:not(.tooltip.up) {
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.navbar-link:hover .tooltip.up {
+  visibility: visible;
+}
