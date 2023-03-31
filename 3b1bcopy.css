@@ -147,7 +147,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .icons-wrappers-container:hover i {
@@ -189,4 +189,37 @@ h1 {
 
 #tiktok-icon:hover {
   color: palevioletred;
+}
+
+.presentation-wrapper {
+  max-width: 1020px;
+  border: 1px solid red;
+}
+
+.presentation-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slide:first-of-type {
+  display: none;
+}
+
+.slide > img {
+  max-width: 100%;
+}
+
+.caption { 
+  text-align: center; 
+  padding: 10px;
+}
+
+.prev, .next {
+  cursor: pointer;
+
+  padding: 30px;
+  font-size: 32px;
+  color: white;
+  border: 1px solid green;
 }

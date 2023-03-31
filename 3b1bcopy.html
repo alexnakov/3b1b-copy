@@ -101,7 +101,47 @@
           <i id="tiktok-icon" class="fab fa-tiktok"></i>
         </span>
       </div>
+      <div class="presentation-wrapper">
+        <div class="presentation-container">
+        <a onclick="changeSlide(-1)" class="prev">&#10094;</a>
+          <div class="slideshow">
+            <div class="slide">
+              <img src="https://img.youtube.com/vi/zeJD6dqJ5lo/maxresdefault.jpg" alt="" class="">
+              <h2 class="caption">Latest video: But what is the Central Limit Theorem?</h2>
+            </div>
+            <div class="slide">
+              <img SameSite=None src="https://www.3blue1brown.com/featured-content/pi-comment.svg" alt="">
+              <h2 class="caption">And find much more below!</h2>
+            </div>
+          </div>
+          <a onclick="changeSlide(1)" class="next">&#10095;</a>
+        </div>
+      </div>
     </div>
   </section>
+  <script>
+    let slideIndex = 1;
+    let slideDivs = document.getElementsByClassName('slide');
+
+    console.log(slideIndex);
+    console.log(slideDivs);
+
+    function changeSlide(n) {
+      slideIndex += n;
+      if (slideIndex == 3) {slideIndex = 2}
+      if (slideIndex == 0) {slideIndex = 1}
+      console.log(slideIndex)
+
+      console.log(slideDivs[1].style.display);
+
+      for (let i = 0; i < slideDivs.length; i++) {
+        slideDivs[i].style.display = 'none'
+      }
+
+      console.log(slideIndex)
+      slideDivs[slideIndex-1].style.display = 'block'
+    }
+    
+  </script>
 </body>
 </html>
