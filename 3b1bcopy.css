@@ -193,33 +193,36 @@ h1 {
 
 .presentation-wrapper {
   max-width: 1020px;
-  border: 1px solid red;
 }
 
-.presentation-container {
+.presentation-wrapper * {
+  border: 1px solid red;;
+}
+
+.buttons-slideset-container {
   width: 100%;
   display: flex;
   align-items: center;
 }
 
-.slide:first-of-type {
-  display: none;
+.slide-container {
+  width: 900px;
+  height: 500px;
+  white-space: nowrap;
+  overflow-x: hidden;
+  display: flex;
 }
 
-.slide > img {
-  max-width: 100%;
-}
 
-.caption { 
-  text-align: center; 
-  padding: 10px;
+.slide {
+  width: 900px;
+  height: 500px;
+  display: inline-block;
 }
 
 .prev, .next {
   cursor: pointer;
-
-  padding: 30px;
+  padding: 16px;
   font-size: 32px;
   color: white;
-  border: 1px solid green;
 }
