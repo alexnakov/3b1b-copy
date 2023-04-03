@@ -109,15 +109,15 @@
           <div class="slide-container">
             
             <div class="slideset">
-              <div class="slide">
+              <div class="slide one">
                 <img src="slide1.jpeg">
                 <h2 class="caption">This is caption 1</h2>
               </div>
-              <div class="slide">
+              <div class="slide two">
                 <img src="slide2.svg">
                 <h2 class="caption">This is caption 2</h2>
               </div>
-              <div class="slide">
+              <div class="slide three">
                 <img src="slide3.jpeg">
                 <h2 class="caption">This is caption 3</h2>
               </div>
@@ -136,36 +136,40 @@
   </section>
   
   <script>
-    // let slideIndex = 0;
-    // let slides = document.getElementsByClassName('slide');
-
-    // function changeSlide(n) {
-    //   console.log(slideIndex)
-    //   console.log(slides)
-    //   console.log('the index is changing')
-
-    //   slideIndex += n;
-    //   console.log(slideIndex)
-
-
-    //   if (slideIndex == slides.length) {slideIndex -= 1}
-    //   if (slideIndex < 0) {slideIndex = 0}
-    //   console.log('rectifying the change')
-    //   console.log(slideIndex)
-
-    //   for (let i = 0; i < slides.length; i++) {
-    //     slides[i].style.visibility = 'hidden';
-    //   }
-    
-    //   slides[slideIndex].style.visibility = 'visible'
-    // }
+    let slideIndex = 0;
+    let slides = document.getElementsByClassName('slide');
 
     function changeSlide(n) {
-      if (changeSlide == 1) {
-        
+      console.log(slideIndex)
+      console.log(slides)
+      console.log('the index is changing')
+
+      slideIndex += n;
+      console.log(slideIndex)
+
+
+      if (slideIndex == slides.length) {
+        slideIndex -= 1;
+        return;
+      }
+      if (slideIndex < 0) {
+        slideIndex = 0;
+        return;
+      }
+      console.log('rectifying the change')
+      console.log(slideIndex)
+
+      if (n === 1) {
+        for (let i = 0; i < slides.length; i++) {
+          console.log(slides[i])
+          slides[i].style.animation = "slideRight 0s ease-in-out 0s 1 fowards;"
+        }
+      } else if (n === -1) {
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.animation = "slideLeft 0s ease-in-out 0s fowards;"
+        }
       }
     }
-    
   </script>
 </body>
 </html>
