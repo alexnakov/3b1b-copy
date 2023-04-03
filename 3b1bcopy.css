@@ -195,8 +195,8 @@ h1 {
   max-width: 1020px;
 }
 
-.presentation-wrapper * {
-  border: 1px solid red;;
+.presentation-wrapper > * {
+  border: 1px solid red;
 }
 
 .buttons-slideset-container {
@@ -209,15 +209,18 @@ h1 {
   width: 900px;
   height: 500px;
   white-space: nowrap;
-  overflow-x: hidden;
   display: flex;
 }
-
 
 .slide {
   width: 900px;
   height: 500px;
   display: inline-block;
+  text-align: center;
+}
+
+.slide > img {
+  height: 450px;
 }
 
 .prev, .next {
@@ -225,4 +228,10 @@ h1 {
   padding: 16px;
   font-size: 32px;
   color: white;
+}
+
+@keyframes slideLeft {
+  0% {
+    
+  }
 }

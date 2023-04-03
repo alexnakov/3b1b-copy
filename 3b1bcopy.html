@@ -104,28 +104,28 @@
       
       <div class="presentation-wrapper">
         <div class="buttons-slideset-container">
-          <a class="prev">&#8678;</a>
+          <a class="prev" onclick="changeSlide(-1)">&#8678;</a>
 
           <div class="slide-container">
             
             <div class="slideset">
               <div class="slide">
-                <figure></figure>
-                <figcaption></figcaption>
+                <img src="slide1.jpeg">
+                <h2 class="caption">This is caption 1</h2>
               </div>
               <div class="slide">
-                <figure></figure>
-                <figcaption></figcaption>
+                <img src="slide2.svg">
+                <h2 class="caption">This is caption 2</h2>
               </div>
               <div class="slide">
-                <figure></figure>
-                <figcaption></figcaption>
+                <img src="slide3.jpeg">
+                <h2 class="caption">This is caption 3</h2>
               </div>
             </div>
             
           </div>
 
-          <a class="next">&#8680;</a>
+          <a class="next" onclick="changeSlide(1)">&#8680;</a>
         </div>
       </div>
 
@@ -136,27 +136,35 @@
   </section>
   
   <script>
-    // let slideIndex = 1;
-    // let slideDivs = document.getElementsByClassName('slide');
-
-    // console.log(slideIndex);
-    // console.log(slideDivs);
+    // let slideIndex = 0;
+    // let slides = document.getElementsByClassName('slide');
 
     // function changeSlide(n) {
+    //   console.log(slideIndex)
+    //   console.log(slides)
+    //   console.log('the index is changing')
+
     //   slideIndex += n;
-    //   if (slideIndex == 3) {slideIndex = 2}
-    //   if (slideIndex == 0) {slideIndex = 1}
     //   console.log(slideIndex)
 
-    //   console.log(slideDivs[1].style.display);
 
-    //   for (let i = 0; i < slideDivs.length; i++) {
-    //     slideDivs[i].style.display = 'none'
+    //   if (slideIndex == slides.length) {slideIndex -= 1}
+    //   if (slideIndex < 0) {slideIndex = 0}
+    //   console.log('rectifying the change')
+    //   console.log(slideIndex)
+
+    //   for (let i = 0; i < slides.length; i++) {
+    //     slides[i].style.visibility = 'hidden';
     //   }
-
-    //   console.log(slideIndex)
-    //   slideDivs[slideIndex-1].style.display = 'block'
+    
+    //   slides[slideIndex].style.visibility = 'visible'
     // }
+
+    function changeSlide(n) {
+      if (changeSlide == 1) {
+        
+      }
+    }
     
   </script>
 </body>
