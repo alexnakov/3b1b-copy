@@ -7,6 +7,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="3b1bcopy.css">
   <link href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
 </head>
 <body>
   <header>
@@ -104,7 +105,7 @@
       
       <div class="presentation-wrapper">
         <div class="buttons-slideset-container">
-          <a class="prev" onclick="changeSlide(-1)">&#8678;</a>
+          <a class="prev" onclick="leftPress()">&#8678;</a>
 
           <div class="slide-container">
             
@@ -125,7 +126,7 @@
             
           </div>
 
-          <a class="next" onclick="changeSlide(1)">&#8680;</a>
+          <a class="next" onclick="rightPress()">&#8680;</a>
         </div>
       </div>
 
@@ -134,41 +135,24 @@
   <section>
 
   </section>
-  
+
   <script>
-    let slideIndex = 0;
-    let slides = document.getElementsByClassName('slide');
+    x_coords_all = 0
+    
+    function leftPress() {
+      x_coords_all -= 900;
 
-    function changeSlide(n) {
-      console.log(slideIndex)
-      console.log(slides)
-      console.log('the index is changing')
+      KUTE.to('.slide.one', {translateX: x_coords_all}).start();
+      KUTE.to('.slide.two', {translateX: x_coords_all}).start();
+      KUTE.to('.slide.three', {translateX: x_coords_all}).start();
+    }
 
-      slideIndex += n;
-      console.log(slideIndex)
+    function rightPress() {
+      x_coords_all += 900;
 
-
-      if (slideIndex == slides.length) {
-        slideIndex -= 1;
-        return;
-      }
-      if (slideIndex < 0) {
-        slideIndex = 0;
-        return;
-      }
-      console.log('rectifying the change')
-      console.log(slideIndex)
-
-      if (n === 1) {
-        for (let i = 0; i < slides.length; i++) {
-          console.log(slides[i])
-          slides[i].style.animation = "slideRight 0s ease-in-out 0s 1 fowards;"
-        }
-      } else if (n === -1) {
-        for (let i = 0; i < slides.length; i++) {
-          slides[i].style.animation = "slideLeft 0s ease-in-out 0s fowards;"
-        }
-      }
+      KUTE.to('.slide.one', {translateX: x_coords_all}).start();
+      KUTE.to('.slide.two', {translateX: x_coords_all}).start();
+      KUTE.to('.slide.three', {translateX: x_coords_all}).start();
     }
   </script>
 </body>
