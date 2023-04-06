@@ -137,23 +137,50 @@
   </section>
 
   <script>
-    x_coords_all = 0
+    var slideIndex = 0;
+    var x_coords_all = 0;
+
+    function blockButtons() {
+      var prevBtn = document.getElementsByClassName(`prev`)[0];
+      var nextBtn = document.getElementsByClassName(`next`)[0];
+
+      if (slideIndex == 0) {
+        prevBtn.style.opacity = 0.2;
+        prevBtn.style.pointerEvents = "none";
+      } else if (slideIndex == 2) {
+        nextBtn.style.opacity = 0.2;
+        nextBtn.style.pointerEvents = "none"; 
+      } else {
+        prevBtn.style.opacity = 1; nextBtn.style.opacity = 1;
+        prevBtn.style.pointerEvents = "auto"; nextBtn.style.pointerEvents = "auto";
+      }
+    }
     
     function leftPress() {
-      x_coords_all -= 900;
-
-      KUTE.to('.slide.one', {translateX: x_coords_all}).start();
-      KUTE.to('.slide.two', {translateX: x_coords_all}).start();
-      KUTE.to('.slide.three', {translateX: x_coords_all}).start();
-    }
-
-    function rightPress() {
       x_coords_all += 900;
 
       KUTE.to('.slide.one', {translateX: x_coords_all}).start();
       KUTE.to('.slide.two', {translateX: x_coords_all}).start();
       KUTE.to('.slide.three', {translateX: x_coords_all}).start();
+
+      slideIndex -= 1;
+      console.log(slideIndex);
+      blockButtons();
     }
+
+    function rightPress() {
+      x_coords_all -= 900;
+
+      KUTE.to('.slide.one', {translateX: x_coords_all}).start();
+      KUTE.to('.slide.two', {translateX: x_coords_all}).start();
+      KUTE.to('.slide.three', {translateX: x_coords_all}).start();
+
+      slideIndex += 1;
+      console.log(slideIndex);
+      blockButtons();
+    }
+
+    blockButtons();
   </script>
 </body>
 </html>
