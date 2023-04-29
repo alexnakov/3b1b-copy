@@ -292,3 +292,61 @@ section.search-navbar-grid * {
   border: none;
   outline: none;
 }
+
+.grid-section, .grid-section * {
+  color: black;
+  background-color: white;
+}
+
+/* .grid * {
+  border: 1px solid red;
+} */
+
+.grid-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.video-box {
+  width: 235px;
+  height: 150px;
+  padding: 5px;
+  transition: 0.5s ease-in;
+  background-color: white;
+}
+
+.video-box:hover * {
+  background-color: #03a9f4;
+  color: #0f5eb8;
+  cursor: pointer;
+  transition: 0.5s ease-in;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 233px;
+  height: 110px;
+}
+
+.image-wrapper > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.slide .caption {
+  color: white ;
+}
+
+.caption {
+  color: black;
+  text-align: center;
+}
+
