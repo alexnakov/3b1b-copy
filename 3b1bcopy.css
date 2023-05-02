@@ -350,3 +350,44 @@ section.search-navbar-grid * {
   text-align: center;
 }
 
+.content-wrapper {
+  max-width: 800px; margin: auto;
+  padding: 40px;
+}
+
+.patreon-section * {
+  font-family: Lora;  
+  background-color: #fafafa;
+  color: black;
+}
+ .p-first { 
+  margin-bottom: 35px;
+ }
+
+ .bottom-half-container {
+  margin-top: 50px;
+  margin-left: 150px;
+  width: 500px;
+ }
+
+ .membership-btn {
+  width: 170px;
+  border: 1px solid black;
+  display: inline-flex;
+  line-height: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #424242;
+  border-radius: 100px;
+ }
+
+ .membership-btn * {
+  background-color: #424242;
+  color: white;
+  font-family: Poppins;
+ }
+
+
+
+
