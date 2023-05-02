@@ -382,11 +382,33 @@ section.search-navbar-grid * {
   border-radius: 100px;
  }
 
+ .membership-btn:hover {
+  cursor: pointer;
+ }
+
  .membership-btn * {
   background-color: #424242;
   color: white;
   font-family: Poppins;
  }
+
+section.mailing > h1 {
+  text-align: center;
+}
+
+section.mailing * {
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+ .sub-box {
+  width: 200px;
+  height: 50px;
+  border: 1px solid blue;
+  margin: auto;
+ }
+
 
 
 
